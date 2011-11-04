@@ -3,4 +3,4 @@
 	url = git@github.com:dxtr/list.git
 [submodule "src/bst"]
 	path = src/bst
-	url = git@github.com:dxtr/list.git
+	url = git@github.com:dxtr/bst.git
