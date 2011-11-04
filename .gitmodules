@@ -1,3 +1,6 @@
 [submodule "src/list"]
 	path = src/list
 	url = git@github.com:dxtr/list.git
+[submodule "src/bst"]
+	path = src/bst
+	url = git@github.com:dxtr/list.git
