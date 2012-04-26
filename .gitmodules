@@ -1,0 +1,6 @@
+[submodule "lib/bst"]
+	path = lib/bst
+	url = https://dxtr@github.com/dxtr/bst.git
+[submodule "lib/list"]
+	path = lib/list
+	url = https://dxtr@github.com/dxtr/list.git
