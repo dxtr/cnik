@@ -1,4 +1,4 @@
-#include "client.h"
+#include <cnik/client.h>
 
 struct Client *clientCreate(const char *nickname, const  char *username, void *channels, const char *server, short unsigned  int port)
 {
