@@ -3,9 +3,9 @@
 
 struct Client 
 {
-	char[65] nickname;
-	char[65] username;
-	char[65] server;
+	char nickname[65];
+	char username[65];
+	char server[65];
 	void *channels;
 
 	short unsigned int port;

@@ -1,10 +1,12 @@
+#include <string.h>
+#include <stdlib.h>
 #include <cnik/client.h>
 
 struct Client *clientCreate(const char *nickname, const  char *username, void *channels, const char *server, short unsigned  int port)
 {
 	struct Client *c = malloc(sizeof(struct Client));
 	
-	memset(c,0,sizeof(sturct Client));
+	memset(c,0,sizeof(struct Client));
 
 	if(c)
 	{
@@ -13,6 +15,8 @@ struct Client *clientCreate(const char *nickname, const  char *username, void *c
 		strncpy(c->server, server, 64);
 		c->port = port;
 	}
+
+	return c;
 }
 
 void clientDestroy(struct Client *client)
@@ -35,7 +39,7 @@ void clientPart(struct Client *client, const char *channel)
 	/* Todo:  I need to learn how to code */
 }
 
-void clientJoin(struct client *client, const char *channel, const char *password)
+void clientJoin(struct Client *client, const char *channel, const char *password)
 {
 	/* Todo:  Is this done yet? */
 }

@@ -37,19 +37,14 @@ struct Sock {
 struct SockAddr *sockAddrCreate(enum EAFReq afreq, const char *hostname, const char *service);
 void sockAddrDestroy(struct SockAddr *sa);
 
-struct Sock sockCreate(void);
+struct Sock *sockCreate(struct SockAddr *address, struct SockAddr *bindaddress);
 void sockDestroy(struct Sock *sock);
 
-inline void sockSetRemotePort(struct Sock *s, uint8_t remoteport)
-	{ if (s) s->remoteport = remoteport; }
-inline void sockSetLocalPort(struct Sock *s, uint8_t localport)
-	{ if (s) s->localport = localport; }
-inline void sockSetConnected(struct Sock *s)
-	{ if (s) s->isconnected = 1; } 
-inline void sockSetDisconnected(sstruct Sock *s)
-	{ if (s) s->isconnected = 0; }
-inline void sockToggleConnected(struct Sock *s)
-	{ if (s) s->isconnected = !(s->isconnected); }
+void sockSetRemotePort(struct Sock *s, uint8_t remoteport);
+void sockSetLocalPort(struct Sock *s, uint8_t localport);
+void sockSetConnected(struct Sock *s);
+void sockSetDisconnected(struct Sock *s);
+void sockToggleConnected(struct Sock *s);
 
 #endif
 

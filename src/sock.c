@@ -1,6 +1,9 @@
+#include <stdlib.h>
+#include <string.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <sys/socket.h>
+#include <sys/types.h>
 #include <netdb.h>
 #include <stdint.h>
 
@@ -25,7 +28,7 @@ struct SockAddr *sockAddrCreate(enum EAFReq afreq, const char *hostname, const c
 void sockAddrDestroy(struct SockAddr *sa)
 {
 	if (sa) {
-		if (sa->ai) freaddrinfo(sa->ai);
+		if (sa->ai) freeaddrinfo(sa->ai);
 		free(sa);
 	}
 }
@@ -40,3 +43,4 @@ struct Sock *sockCreate(struct SockAddr *address, struct SockAddr *bindaddress)
 	}
 	return s;
 }
+

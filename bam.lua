@@ -1,6 +1,6 @@
 settings = NewSettings()
 settings.cc.exe_c = "gcc"
-settings.cc.flags_c:Add("-Wall", "-std=c99", "-O0", "-g")
+settings.cc.flags_c:Add("-Wall", "-O0", "-g")
 settings.cc.includes:Add("include")
 settings.link.exe = "clang"
 

@@ -7,7 +7,7 @@
 
 #include <cnik/sock.h>
 
-struct addrinfo* resolveHost(const char *hostname, const char *service);
+struct addrinfo* resolveHost(int ai_family, const char *hostname, const char *service);
 
 #endif
 
