@@ -1,9 +1,0 @@
-[submodule "src/list"]
-	path = src/list
-	url = https://github.com/dxtr/list.git
-[submodule "src/bst"]
-	path = src/bst
-	url = https://github.com/dxtr/bst.git
-[submodule "htable"]
-	path = src/htable
-	url = https://github.com/dxtr/htable.git
